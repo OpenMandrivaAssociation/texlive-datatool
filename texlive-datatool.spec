@@ -1,3 +1,9 @@
+# revision 16023
+# category Package
+# catalog-ctan /macros/latex/contrib/datatool
+# catalog-date 2009-11-15 19:44:35 +0100
+# catalog-license lppl
+# catalog-version 2.03
 Name:		texlive-datatool
 Version:	2.03
 Release:	1
@@ -72,6 +78,7 @@ csvtools bundle.
 #- source
 %doc %{_texmfdistdir}/source/latex/datatool/datatool.dtx
 %doc %{_texmfdistdir}/source/latex/datatool/datatool.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -82,3 +89,5 @@ csvtools bundle.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
