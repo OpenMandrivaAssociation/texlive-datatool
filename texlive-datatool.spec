@@ -1,12 +1,12 @@
-# revision 16023
+# revision 27115
 # category Package
 # catalog-ctan /macros/latex/contrib/datatool
-# catalog-date 2009-11-15 19:44:35 +0100
+# catalog-date 2012-07-20 01:08:10 +0200
 # catalog-license lppl
-# catalog-version 2.03
+# catalog-version 2.10
 Name:		texlive-datatool
-Version:	2.03
-Release:	2
+Version:	2.10
+Release:	1
 Summary:	Tools to load and manipulate data
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/datatool
@@ -55,16 +55,32 @@ csvtools bundle.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/bibtex/bst/datatool/databib.bst
 %{_texmfdistdir}/tex/latex/datatool/databar.sty
 %{_texmfdistdir}/tex/latex/datatool/databib.sty
 %{_texmfdistdir}/tex/latex/datatool/datapie.sty
 %{_texmfdistdir}/tex/latex/datatool/dataplot.sty
+%{_texmfdistdir}/tex/latex/datatool/datatool-base.sty
+%{_texmfdistdir}/tex/latex/datatool/datatool-fp.sty
+%{_texmfdistdir}/tex/latex/datatool/datatool-pgfmath.sty
 %{_texmfdistdir}/tex/latex/datatool/datatool.sty
 %{_texmfdistdir}/tex/latex/datatool/person.sty
 %doc %{_texmfdistdir}/doc/latex/datatool/CHANGES
+%doc %{_texmfdistdir}/doc/latex/datatool/INSTALL
 %doc %{_texmfdistdir}/doc/latex/datatool/README
+%doc %{_texmfdistdir}/doc/latex/datatool/datatool-user.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/datatool-user.tex
 %doc %{_texmfdistdir}/doc/latex/datatool/datatool.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-barchart.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-barchart.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-mail-merge.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-mail-merge.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-piechart.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-piechart.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-student-records.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-student-scores.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-student-scores.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-two-per-row.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-two-per-row.tex
 #- source
 %doc %{_texmfdistdir}/source/latex/datatool/datatool.dtx
 %doc %{_texmfdistdir}/source/latex/datatool/datatool.ins
@@ -77,4 +93,4 @@ csvtools bundle.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
