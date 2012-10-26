@@ -1,11 +1,11 @@
-# revision 27115
+# revision 27917
 # category Package
 # catalog-ctan /macros/latex/contrib/datatool
-# catalog-date 2012-07-20 01:08:10 +0200
+# catalog-date 2012-10-06 23:27:30 +0200
 # catalog-license lppl
-# catalog-version 2.10
+# catalog-version 2.12
 Name:		texlive-datatool
-Version:	2.10
+Version:	2.12
 Release:	1
 Summary:	Tools to load and manipulate data
 Group:		Publishing
