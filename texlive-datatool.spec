@@ -1,11 +1,11 @@
-# revision 27917
+# revision 31588
 # category Package
 # catalog-ctan /macros/latex/contrib/datatool
-# catalog-date 2012-10-06 23:27:30 +0200
+# catalog-date 2013-09-06 14:59:23 +0200
 # catalog-license lppl
-# catalog-version 2.12
+# catalog-version 2.18
 Name:		texlive-datatool
-Version:	2.12
+Version:	2.18
 Release:	1
 Summary:	Tools to load and manipulate data
 Group:		Publishing
@@ -20,7 +20,7 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-The bundle provides six packages: - datatool.sty: databases may
+The tools comprise six packages: - datatool.sty: databases may
 be created using LaTeX commands or by importing external files;
 they may be sorted numerically or alphabetically; repetitive
 operations (such as mail merging) may be performed on each row
@@ -35,15 +35,18 @@ available; - dataplot.sty: a database may be represented as a
 the plot's overall appearance, and of legends and other extra
 information; - databar.sty: a database may be represented as a
 bar chart; overall appearance, colouring and annotation are
-controllable; - databib.sty: a bibliography may be loaded into
-a datatool database, and manipulated there before being printed
-(this permits a LaTeX-based route to printing bibliographies in
-formats for which no BibTeX style is available); and -
-person.sty: provides support for displaying a person's name and
-pronoun in a document, thus avoiding cumbersome use of
-"he/she", etc. The drawing packages make use of PGF/TikZ for
-their output. The bundle replaces and supersedes the author's
-csvtools bundle.
+controllable; - datagidx.sty: provides a way of indexing or
+creating glossaries/lists of acronyms that uses TeX to do the
+sorting and collating instead of using an external indexing
+application, such as xindy or makeindex; - databib.sty: a
+bibliography may be loaded into a datatool database, and
+manipulated there before being printed (this permits a LaTeX-
+based route to printing bibliographies in formats for which no
+BibTeX style is available); and - person.sty: provides support
+for displaying a person's name and pronoun in a document, thus
+avoiding cumbersome use of "he/she", etc. The drawing packages
+make use of PGF/TikZ for their output. The bundle replaces and
+supersedes the author's csvtools bundle.
 
 %post
     %{_sbindir}/texlive.post
@@ -55,8 +58,10 @@ csvtools bundle.
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/bibtex/bst/datatool/databib.bst
 %{_texmfdistdir}/tex/latex/datatool/databar.sty
 %{_texmfdistdir}/tex/latex/datatool/databib.sty
+%{_texmfdistdir}/tex/latex/datatool/datagidx.sty
 %{_texmfdistdir}/tex/latex/datatool/datapie.sty
 %{_texmfdistdir}/tex/latex/datatool/dataplot.sty
 %{_texmfdistdir}/tex/latex/datatool/datatool-base.sty
@@ -67,20 +72,61 @@ csvtools bundle.
 %doc %{_texmfdistdir}/doc/latex/datatool/CHANGES
 %doc %{_texmfdistdir}/doc/latex/datatool/INSTALL
 %doc %{_texmfdistdir}/doc/latex/datatool/README
+%doc %{_texmfdistdir}/doc/latex/datatool/datatool-code.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/datatool-user.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/datatool-user.tex
-%doc %{_texmfdistdir}/doc/latex/datatool/datatool.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/data-raw-psaved.dbtex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/data-raw-saved.dbtex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/data-raw.dbtex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/data.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/data2.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/exp25a.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/exp25b.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/exp30a.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/fruit.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/groupa.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/groupb.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/index.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/mydata.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/mynewdata.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/onecol.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/plotdata.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/polygon.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/profits.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/rawdata.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/rawdata2.csv
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-barchart.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-barchart.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-datatooltk.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-datatooltk.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-dict.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-dict.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-gidx.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-gidx.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-glossary.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-glossary.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-index.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-index.tex
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-mail-merge.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-mail-merge.tex
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-piechart.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-piechart.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-sort.tex
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-student-records.csv
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-student-scores.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-student-scores.tex
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-two-per-row.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-two-per-row.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample3.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample4.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/scores2.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/semesterscores.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/students.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/studentscores.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/test-export-from-calc.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/test-missing-some-headers.csv
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/test-rawtex.dbtex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/test-scores.csv
 #- source
 %doc %{_texmfdistdir}/source/latex/datatool/datatool.dtx
 %doc %{_texmfdistdir}/source/latex/datatool/datatool.ins
@@ -93,4 +139,4 @@ csvtools bundle.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
