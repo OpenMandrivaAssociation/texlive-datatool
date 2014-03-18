@@ -1,11 +1,11 @@
-# revision 32860
+# revision 33136
 # category Package
 # catalog-ctan /macros/latex/contrib/datatool
-# catalog-date 2014-02-03 19:57:05 +0100
+# catalog-date 2014-03-09 11:01:58 +0100
 # catalog-license lppl
-# catalog-version 2.20
+# catalog-version 2.21
 Name:		texlive-datatool
-Version:	2.20
+Version:	2.21
 Release:	1
 Summary:	Tools to load and manipulate data
 Group:		Publishing
@@ -101,6 +101,8 @@ supersedes the author's csvtools bundle.
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-datatooltk.tex
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-dict.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-dict.tex
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-europecv-bib.pdf
+%doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-europecv-bib.tex
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-gidx.pdf
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-gidx.tex
 %doc %{_texmfdistdir}/doc/latex/datatool/samples/sample-glossary.pdf
