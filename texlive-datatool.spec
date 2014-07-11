@@ -6,7 +6,7 @@
 # catalog-version 2.21
 Name:		texlive-datatool
 Version:	2.21
-Release:	2
+Release:	3
 Summary:	Tools to load and manipulate data
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/datatool
