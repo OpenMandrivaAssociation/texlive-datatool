@@ -1,6 +1,6 @@
 Name:		texlive-datatool
-Version:	2.30
-Release:	2
+Version:	2.31
+Release:	1
 Summary:	Tools to load and manipulate data
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/datatool
