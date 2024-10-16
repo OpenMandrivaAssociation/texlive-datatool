@@ -3,7 +3,7 @@ Version:	52663
 Release:	2
 Summary:	Tools to load and manipulate data
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/datatool
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/datatool
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/datatool.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/datatool.doc.r%{version}.tar.xz
