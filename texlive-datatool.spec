@@ -1,5 +1,5 @@
 Name:		texlive-datatool
-Version:	74840
+Version:	75019
 Release:	1
 Summary:	Tools to load and manipulate data
 Group:		Publishing
